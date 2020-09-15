@@ -1,7 +1,8 @@
 <h1 align="center">✌️SSAFY GitAuto✌️
 
-SSAFY 과제 제출용 GitLab Repository 자동생성기
+<h2 align="center">SSAFY 과제 제출용 GitLab Repository 자동생성기
 -----------------------------------------------
 
-##OS 지원 : Windows , Mac, Linux
+
+<h4 align="center">OS 지원 : Windows , Mac, Linux
 
