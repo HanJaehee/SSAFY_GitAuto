@@ -12,7 +12,7 @@ class gitAuto:
         # self.prof_name = _prof_name # chk
         self.work_space = _work_space
         #self.repo_name = 'hw_' + time.strftime('%y%m%d', time.localtime(time.time()))
-        self.repo_name = 'hw25'
+        self.repo_name = 'hw010'
         self.prof_id = '487'
 
     def chkRepo(self):
@@ -85,8 +85,8 @@ class gitAuto:
             print("[-] Error in chkMember()")
             print("ErrorMsg : ", e)
 
-mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23',
-              'ssafy7', '/Users/hindsight/git/')
+mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23', 'ssafy7', '/Users/hindsight/ssafy/work_java/')
+#mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23', 'ssafy7', '/Users/hindsight/git/')
 
 if not mgr.chkRepo():
     mgr.makeDir()
