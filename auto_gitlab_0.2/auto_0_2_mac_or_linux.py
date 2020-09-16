@@ -7,7 +7,7 @@ import time
 Auto GitLab ver 0.1 for Mac or Linux
 
 Usage
-
+repo_name = 2020.09.16 => hw_200916
 private_token : Input your private_token
 user_name : Input your user_name
 work_space = input your local git repository path
