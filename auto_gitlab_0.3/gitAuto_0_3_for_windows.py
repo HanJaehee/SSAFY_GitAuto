@@ -11,8 +11,8 @@ class gitAuto:
         self.user_name = _user_name
         # self.prof_name = _prof_name # chk
         self.work_space = _work_space
-        #self.repo_name = 'hw_' + time.strftime('%y%m%d', time.localtime(time.time()))
-        self.repo_name = 'hw31'
+        self.repo_name = 'hw_' + time.strftime('%y%m%d', time.localtime(time.time()))
+        #self.repo_name = 'hw31'
         self.prof_id = '487'
 
     def chkRepo(self):
@@ -95,8 +95,29 @@ class gitAuto:
             print("[-] Error in chkMember()")
             print("ErrorMsg : ", e)
 
-#mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23', 'ssafy7', 'C:\\ssafy\\work_java')
-mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23', 'ssafy7', 'C:\\users\\gkswo\\git')
+
+private_key = "your PrivateKey"
+user_name = "username " # lab.ssafy.com/KimSSAFY/hw_200918 => KIMSSAFY 
+prof_name = 'ssafy7'
+work_path = 'C:\\ssafy\\work_java' # your workspace or git path
+
+# mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23', 'ssafy7', 'C:\\ssafy\\work_java')
+"""
+워크 스페이스에 깃 init하고 생성하는 방식 ( 이클립스에서 권장하지 않는 방식, 하지만 편하고 파일이 깔끔하게 올라감 )
+1. 이클립스 숙제 프로젝트 생성하고 숙제 완성
+2. gitAuto 실행 => gitlab에 프로젝트 생성 및 푸시, 멤버추가 까지 완료된 상태
+3. 이후 수정사항이 있다면, 이클립스에서 add existing local repository 누르고, 서칭 경로를 work_java로 바꿔주고 깃 추가 후 자유롭게 커밋 푸시
+"""
+# mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23', 'ssafy7', 'C:\\users\\gkswo\\git')
+"""
+워크스페이스와 분리된 git 폴더에서 init 후 생성 하는 방식( 이클립스에서 권장하는 방식, 다소 불편한 부분들이 있고 파일이 중복된다 )
+1. 이클립스 숙제 프로젝트 생성
+2. 파일 실행
+3. add existing local respository에서 서칭 경로를 git 폴더로(아마 디폴트 일거에요)
+4. 이후 자유롭게 커밋 푸시
+"""
+
+mgr = gitAuto(private_key, user_name, prof_name, work_path)
 if not mgr.chkRepo():
     mgr.makeDir()
 
