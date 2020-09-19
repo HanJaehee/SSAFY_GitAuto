@@ -7,8 +7,24 @@
 
 Usage
 ---
-
- * Eclipse Work Space에 깃 init 하고 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )<br>
+ <h3>👏 필수 !! Private Key 생성<br></h3>
+ <ol style="list-style-type : decimal;">
+ <li> lab.ssafy.com 에 로그인 한 후 우측 상단의 '설정' 또는 'Setting' 접속</li>
+  <img width="276" alt="우측상단 설정접속" src="https://user-images.githubusercontent.com/38396374/93663795-49078980-faa5-11ea-893a-767a630af14f.png"><br>
+ <li> 액세스 토큰 탭에서 이름과 기한, 그리고 'api' 체크 후 personal access token 생성 ( 🚫 공유하지 마세요 ! 🚫 )</li>
+  <img width="1003" alt="액세스토큰접속" src="https://user-images.githubusercontent.com/38396374/93663792-45740280-faa5-11ea-80f1-fc903fb48eb5.png"><br>
+ <li> 액세스 토큰 획득 한 것을 GitAuto 내 private_key에 넣기</li>
+  <img width="1051" alt="액세스토큰획득" src="https://user-images.githubusercontent.com/38396374/93663794-486ef300-faa5-11ea-8680-6697ff124e12.png"><br>
+ <li> 이제 하단의 설명 잘 읽어보시고 원하는 방법으로 자동화하기! </li>
+</ol>
+ 
+ <br><br>
+ 두 가지의 사용법이 존재해요.
+ 👆 Eclipse Work Space에 git 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )<br>
+ ✌ git 폴더에 git 생성하는 방식 ( eclipse에서 권장하는 방식 but 파일이 이중화되어 올라가고, 첫번째에 비교해서 여러번의 클릭 ( 아마 기존에 많이 사용하시던 방법일거에요 ! )
+ 
+ 먼저, 
+ 👆 Eclipse Work Space에 깃 init 하고 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )<br>
  work_path = "eclipse work space" ex) C:\\ssafy\\work_java   ||  /users/kimssafy/ssafy/work_java
 <ol style="list-style-type : decimal;">
   <li>이클립스 숙제 프로젝트 생성하고 숙제 완성</li>
