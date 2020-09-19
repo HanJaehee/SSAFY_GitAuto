@@ -1,14 +1,14 @@
-#-*- coding: utf-8 -*-
+#-*- encoding: utf-8 -*-
 import requests as req
 import json
 import os
 import time
 import subprocess as sp
 
-private_key = "m522bRJaYpBv_BXiUGZ3"
-user_name = "gkswogml23" # lab.ssafy.com/KimSSAFY/hw_200918 => KIMSSAFY 
+private_key = "your PrivateKey"
+user_name = "username " # lab.ssafy.com/KimSSAFY/hw_200918 => KIMSSAFY 
 prof_name = 'ssafy7'
-work_path = '/Users/hindsight/ssafy/work_java' # your workspace or git path
+work_path = 'your workpath' # your workspace or git path
 
 # mgr = gitAuto('private_key', 'gkswogml23', 'ssafy7', 'C:\\ssafy\\work_java')
 """
@@ -36,7 +36,7 @@ class gitAuto:
         self.prof_id = '487'
 
     def chkRepo(self):
-        return os.path.isdir(self.work_space + self.repo_name)
+        return os.path.isdir(self.work_space + '/' + self.repo_name)
 
     def makeDir(self):
         print("[*] Start to make " + self.repo_name)
