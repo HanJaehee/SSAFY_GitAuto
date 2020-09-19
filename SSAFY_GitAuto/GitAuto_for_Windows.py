@@ -9,14 +9,14 @@ user_name = "username " # lab.ssafy.com/KimSSAFY/hw_200918 => KIMSSAFY
 prof_name = 'ssafy7'
 work_path = 'your workpath' # your workspace or git path
 
-# mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23', 'ssafy7', 'C:\\ssafy\\work_java')
+# mgr = gitAuto('privateKey', 'username', 'ssafy7', 'C:\\ssafy\\work_java')
 """
 워크 스페이스에 깃 init하고 생성하는 방식 ( 이클립스에서 권장하지 않는 방식, 하지만 편하고 파일이 깔끔하게 올라감 )
 1. 이클립스 숙제 프로젝트 생성하고 숙제 완성
 2. gitAuto 실행 => gitlab에 프로젝트 생성 및 푸시, 멤버추가 까지 완료된 상태
 3. 이후 수정사항이 있다면, 이클립스에서 add existing local repository 누르고, 서칭 경로를 work_java로 바꿔주고 깃 추가 후 자유롭게 커밋 푸시
 """
-# mgr = gitAuto('m522bRJaYpBv_BXiUGZ3', 'gkswogml23', 'ssafy7', 'C:\\users\\gkswo\\git')
+# mgr = gitAuto('privateKey', 'username', 'ssafy7', 'C:\\users\\gkswo\\git')
 """
 워크스페이스와 분리된 git 폴더에서 init 후 생성 하는 방식( 이클립스에서 권장하는 방식, 다소 불편한 부분들이 있고 파일이 중복된다 )
 1. 이클립스 숙제 프로젝트 생성
