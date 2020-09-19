@@ -8,7 +8,7 @@
 Usage
 ---
 
- * Eclipse Work Space에 깃 init 하고 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )
+ * Eclipse Work Space에 깃 init 하고 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )<br>
  work_path = "eclipse work space" ex) C:\\ssafy\\work_java   ||  /users/kimssafy/ssafy/work_java
 <ol style="list-style-type : decimal;">
   <li>이클립스 숙제 프로젝트 생성하고 숙제 완성</li>
