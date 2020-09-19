@@ -18,18 +18,19 @@ Usage
  <li> 이제 하단의 설명 잘 읽어보시고 원하는 방법으로 자동화하기! </li>
 </ol>
  
- <br><br>
- 두 가지의 사용법이 존재해요.
- 👆 Eclipse Work Space에 git 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )<br>
- ✌ git 폴더에 git 생성하는 방식 ( eclipse에서 권장하는 방식 but 파일이 이중화되어 올라가고, 첫번째에 비교해서 여러번의 클릭 ( 아마 기존에 많이 사용하시던 방법일거에요 ! )
  
- 먼저, 
+ <br><br>
+ 두 가지의 사용법이 존재해요.<br>
+ 👆 Eclipse Work Space에 git 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )<br>
+ ✌ git 폴더에 git 생성하는 방식 ( eclipse에서 권장하는 방식 but 파일이 이중화되어 올라가고, 첫번째에 비교해서 여러번의 클릭 ( 아마 기존에 많이 사용하시던 방법일거에요 ! )<br>
+ 
+ 먼저,<br>
  👆 Eclipse Work Space에 깃 init 하고 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )<br>
  work_path = "eclipse work space" ex) C:\\ssafy\\work_java   ||  /users/kimssafy/ssafy/work_java
 <ol style="list-style-type : decimal;">
   <li>이클립스 숙제 프로젝트 생성하고 숙제 완성</li>
   <img width="594" alt="createProject" src="https://user-images.githubusercontent.com/38396374/93661491-2e2c1980-fa93-11ea-9f65-30b475ceea45.png">
-  <li>GitAuto 실행, 이후 수정사항 없다면 끝! ( gitlab에 프로젝트 생성 및 푸시, 멤버 추가 까지 완료된 상태)
+  <li>GitAuto 실행, 이후 수정사항 없다면 끝! ( gitlab에 프로젝트 생성 및 프로젝트 Push, 멤버 추가 까지 완료된 상태)
   <img width="578" alt="niceGitAuto" src="https://user-images.githubusercontent.com/38396374/93661493-31bfa080-fa93-11ea-9f04-790db91b7bd2.png">
   <li>이후 수정사항이 생겼다면, 이클립스에서 add existing local respository 클릭, 서칭 경로를 work_java로 바꿔준다.
   <img width="273" alt="addLocal" src="https://user-images.githubusercontent.com/38396374/93661499-35532780-fa93-11ea-8592-a80648540290.png"><br>
@@ -39,6 +40,26 @@ Usage
   <img width="591" alt="자동으로gitStaging에잡히는모습" src="https://user-images.githubusercontent.com/38396374/93661497-34ba9100-fa93-11ea-9e5d-791ab9fef1df.png">
 
 </ol>
+<br><br>
+이제 두번째 ! <br>
+✌ git 폴더에 git 생성하는 방식 ( eclipse에서 권장하는 방식 but 파일이 이중화되어 올라가고, 첫번째에 비교해서 여러번의 클릭 ( 아마 기존에 많이 사용하시던 방법일거에요 ! )<br>
+work_path = "git path" ex) C:\\Users\\KimSSAFY\\git || /users/kimssafy/git
+<ol style="list-style-type : decimal;">
+ <li>이클립스 프로젝트 생성 및 숙제 완성</li>
+ <img width="594" alt="createProject" src="https://user-images.githubusercontent.com/38396374/93661491-2e2c1980-fa93-11ea-9f65-30b475ceea45.png"><br/>
+ <li>GitAuto 실행, ( gitlab 프로젝트에 생성, 멤버 추가까지 완료된 상태 )</li>
+ <img width="580" alt="success git" src="https://user-images.githubusercontent.com/38396374/93664294-a51fdd00-faa8-11ea-9253-008dcc39bb55.png">
+ <li>git repository 탭에서 git 추가 </li>
+ <img width="596" alt="addgit" src="https://user-images.githubusercontent.com/38396374/93664296-a8b36400-faa8-11ea-9aa3-43edae7b66de.png">
+ <li>이클립스 프로젝트에서 우클릭 -> Team 탭 -> Share Project... 선택한 후 git repository 선택</li>
+ <img width="514" alt="selectTeam" src="https://user-images.githubusercontent.com/38396374/93664297-a94bfa80-faa8-11ea-838a-f3f4ea7cb7b6.png">
+ <img width="760" alt="selectgitrepo" src="https://user-images.githubusercontent.com/38396374/93664298-ab15be00-faa8-11ea-9165-9e9ffa6923bb.png">
+ <li>git Staging 탭에서 연동된 것 확인 가능 ! 이제 커밋, 푸시 하시면 됩니다! 끝!</li>
+ <img width="927" alt="addandpush" src="https://user-images.githubusercontent.com/38396374/93664300-abae5480-faa8-11ea-8c3d-c2baeafb00ea.png">
+</ol>
+<br><br>
+
+
 
 
 windows issue
