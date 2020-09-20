@@ -4,7 +4,7 @@
 
 
 <h4 align="center">OS 지원 : Windows , Mac, Linux</h4>
-<h4 align="center">Python 3.x 버전 필요 ! </h4>
+<h4 align="center>❗Python 3.x 버전 필요 !❗</h4>
 
 Usage
 ---
