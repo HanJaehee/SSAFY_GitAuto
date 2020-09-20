@@ -32,8 +32,7 @@ class gitAuto:
         self.user_name = _user_name
         # self.prof_name = _prof_name # chk
         self.work_space = _work_space
-        #self.repo_name = 'hw_' + time.strftime('%y%m%d', time.localtime(time.time()))
-        self.repo_name = 'hw_19'
+        self.repo_name = 'hw_' + time.strftime('%y%m%d', time.localtime(time.time()))
         self.prof_id = '487'
 
     def chkRepo(self):
