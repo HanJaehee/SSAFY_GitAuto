@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 import requests as req
 import json
 import os
