@@ -1,4 +1,3 @@
-#-*- encoding: utf-8 -*-
 import requests as req
 import json
 import os
@@ -10,14 +9,15 @@ user_name = "username " # lab.ssafy.com/KimSSAFY/hw_200918 => KIMSSAFY
 prof_name = 'ssafy7'
 work_path = 'your workpath' # your workspace or git path
 
-# mgr = gitAuto('private_key', 'username', 'ssafy7', '/Users/kimssafy/ssafy/work_java')
+
+# mgr = gitAuto('private_key', 'gkswogml23', 'ssafy7', 'C:\\ssafy\\work_java')
 """
 워크 스페이스에 깃 init하고 생성하는 방식 ( 이클립스에서 권장하지 않는 방식, 하지만 편하고 파일이 깔끔하게 올라감 )
 1. 이클립스 숙제 프로젝트 생성하고 숙제 완성
 2. gitAuto 실행 => gitlab에 프로젝트 생성 및 푸시, 멤버추가 까지 완료된 상태
 3. 이후 수정사항이 있다면, 이클립스에서 add existing local repository 누르고, 서칭 경로를 work_java로 바꿔주고 깃 추가 후 자유롭게 커밋 푸시
 """
-# mgr = gitAuto('private_key', 'username', 'ssafy7', '/Users/kimssafy/git')
+# mgr = gitAuto('private_key', 'gkswogml23', 'ssafy7', 'C:\\users\\user\\git')
 """
 워크스페이스와 분리된 git 폴더에서 init 후 생성 하는 방식( 이클립스에서 권장하는 방식, 다소 불편한 부분들이 있고 파일이 중복된다 )
 1. 이클립스 숙제 프로젝트 생성
@@ -32,11 +32,12 @@ class gitAuto:
         self.user_name = _user_name
         # self.prof_name = _prof_name # chk
         self.work_space = _work_space
-        self.repo_name = 'hw_' + time.strftime('%y%m%d', time.localtime(time.time()))
+        #self.repo_name = 'hw_' + time.strftime('%y%m%d', time.localtime(time.time()))
+        self.repo_name = 'hw_19'
         self.prof_id = '487'
 
     def chkRepo(self):
-        return os.path.isdir(self.work_space + '/' + self.repo_name)
+        return os.path.isdir(self.work_space + self.repo_name)
 
     def makeDir(self):
         print("[*] Start to make " + self.repo_name)
@@ -47,7 +48,7 @@ class gitAuto:
     def makeProject(self):
         try:
             print("[*] Start to make the Local Repository")
-            os.chdir(self.work_space + self.repo_name)
+            os.chdir(self.work_space + '/' + self.repo_name)
             init_out = sp.check_output(['git init'], shell=True, encoding='utf-8')
             print("[+] Success")
             print("[*] Start to make README && add all files && commit ")
