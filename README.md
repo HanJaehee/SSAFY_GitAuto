@@ -6,9 +6,10 @@
 <h4 align="center">OS 지원 : Windows , Mac, Linux</h4>
 <h4 align="center">❗Python 3.x 버전 필요 !❗</h4>
 
-
 Usage
 ---
+ <h3>👋 pip3 install requests || pip install requests ( Python 버전 체크하시고 명령어 입력하세요! )
+ <br>
  <h3>👏 필수 !! Private Key 생성<br></h3>
  <ol style="list-style-type : decimal;">
  <li> lab.ssafy.com 에 로그인 한 후 우측 상단의 '설정' 또는 'Setting' 접속</li>
