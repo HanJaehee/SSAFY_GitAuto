@@ -8,7 +8,7 @@
 
 Usage
 ---
- <h3>pip3 install requests || pip install requests ( Python 버전 체크하시고 명령어 입력하세요! )
+ <h3>👋 pip3 install requests || pip install requests ( Python 버전 체크하시고 명령어 입력하세요! )
  <br>
  <h3>👏 필수 !! Private Key 생성<br></h3>
  <ol style="list-style-type : decimal;">
