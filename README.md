@@ -5,6 +5,7 @@
 
 <h4 align="center">OS 지원 : Windows , Mac, Linux</h4>
 <h4 align="center">❗Python 3.x 버전 필요 !❗</h4>
+<h4 align="center"> VSC, Eclipse 지원! </h4>
 
 Usage
 ---
@@ -21,8 +22,21 @@ Usage
  <li> 이제 하단의 설명 잘 읽어보시고 원하는 방법으로 자동화하기! </li>
 </ol>
  
+ <h4> Visual Studio Code ver. update! </h4>
+ Vue.js를 새로 배우며 사용할 Git Auto를 업데이트 했어요.<br/>
+ VSC는 깃허브를 사용하기에 불편함이 없지만, 우리는 매일매일 새로운 레포지토리를 생성하고, 멤버를 추가해야하기 때문에 크게 바뀐점은 없는 것 같아 VSC 버전도 업데이트했습니다!
+ <br />
+ 먼저, VSC를 사용할때 추천드리는 디렉토리 구조 입니다.
+ <img width="189" alt="Screen Shot 2020-11-10 at 11 30 50 PM" src="https://user-images.githubusercontent.com/38396374/98687224-d59b3d80-23ac-11eb-9d5a-9ae6f9458be1.png">
+ 매일 파일 구조는 day_오늘날짜 로 생성해 그 안의 HW 폴더 내에 숙제를 진행하시고 Git Auto를 실행하시면 됩니다!
  
- <br><br>
+ 본인이 사용하는 디렉토리에서 벗어나고 싶지 않다면, 코드를 변경해서 사용하셔도 무방합니다!<br/>
+ 
+ 이외의 궁금한 부분들은 깃허브의 issue, ssafy 매터모스트, hindsight@kakao.com 등 으로 메일 주세요!
+ <br/>
+ --- 
+ <br/>
+ <h4> Eclipse ver. </h4>
  두 가지의 사용법이 존재해요.<br>
  👆 Eclipse Work Space에 git 생성하는 방식 ( eclipse에서 권장하진 않음 but 편하고 파일이 깔끔하게 올라감 )<br>
  ✌ git 폴더에 git 생성하는 방식 ( eclipse에서 권장하는 방식 but 파일이 이중화되어 올라가고, 첫번째에 비교해서 여러번의 클릭 ( 아마 기존에 많이 사용하시던 방법일거에요 ! )<br>
