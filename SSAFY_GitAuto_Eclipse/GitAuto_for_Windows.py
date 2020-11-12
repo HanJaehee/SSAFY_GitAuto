@@ -1,14 +1,11 @@
 #-*- coding: utf-8 -*-
-import requests as req
 import json
+import sys
 import os
 import time
 import subprocess as sp
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QLineEdit, QFileDialog, QLabel)
 
-private_key = "your PrivateKey"
-user_name = "username " # lab.ssafy.com/KimSSAFY/hw_200918 => KIMSSAFY 
-prof_name = 'ssafy7'
-work_path = 'your workpath' # your workspace or git path
 
 # mgr = gitAuto('privateKey', 'username', 'ssafy7', 'C:\\ssafy\\work_java')
 """
@@ -26,13 +23,15 @@ work_path = 'your workpath' # your workspace or git path
 4. 이후 자유롭게 커밋 푸시
 """
 
+origin_path = os.path.dirname(os.path.realpath(__file__))
+
 class gitAuto:
-    def __init__(self, _private_token, _user_name, _prof_id, _work_space):
+    def __init__(self, _private_token, _user_name, _repo_name, _prof_id, _work_space):
         self.private_token = _private_token
         self.user_name = _user_name
         # self.prof_name = _prof_name # chk
         self.work_space = _work_space
-        self.repo_name = 'hw_' + time.strftime('%y%m%d', time.localtime(time.time()))
+        self.repo_name = _repo_name
         #self.repo_name = 'hw31'
         self.prof_id = '487'
 
@@ -65,7 +64,7 @@ class gitAuto:
         print("[+] Success")
         
         #push 
-        print("[*] Start to push https://lab.ssafy.com/" + self.user_name + '/' + self.repo_name + '.git')
+        print("[*] Start to push https://lab.ssafy.com/" + self.user_name + "/" + self.repo_name + '.git')
         push_msg = 'git push --set-upstream https://lab.ssafy.com/' + \
             self.user_name + '/' + self.repo_name + '.git master'
         push_out = sp.check_output(push_msg, shell=True, encoding='utf-8')
@@ -116,10 +115,116 @@ class gitAuto:
             print("[-] Error in chkMember()")
             print("ErrorMsg : ", e)
 
-mgr = gitAuto(private_key, user_name, prof_name, work_path)
-if not mgr.chkRepo():
-    mgr.makeDir()
 
-mgr.makeProject()
-mgr.makeMember()
-mgr.chkMember()
+class MyApp(QWidget):
+
+    def __init__(self):
+        super().__init__()
+        try:
+            a = open('info.txt', 'r')
+        except Exception as e:
+            os.system('fsutil file createnew info.txt 0')
+            a = open('info.txt', 'r')
+        a = a.read()
+        data = a.split('\n')
+        self.initUI(data)
+
+    def initUI(self, data):
+        if data[0]:
+            api_keys, userid, profid, file_path = data
+        else:
+            api_keys = None
+            userid = None
+            profid = None
+            file_path = None
+
+        self.ulbl = QLabel('GITLAB ID', self)
+        self.ulbl.move(20, 40)
+        self.userid = QLineEdit(self)
+        self.userid.move(110, 35)
+        self.userid.resize(170, 20)
+        if userid:
+            self.userid.setText(userid)
+
+        self.plbl = QLabel('PROF ID', self)
+        self.plbl.move(20, 75)
+        self.profid = QLineEdit(self)
+        self.profid.move(110, 70)
+        self.profid.resize(170, 20)
+        if profid:
+            self.profid.setText(profid)
+
+        self.rlbl = QLabel('REPOSITORY', self)
+        self.rlbl.move(20, 110)
+        self.repo_name = QLineEdit(self)
+        self.repo_name.move(110, 105)
+        self.repo_name.resize(170, 20)
+        self.repo_name.setText('hw_' + time.strftime('%y%m%d', time.localtime(time.time())))
+
+        self.api_lbl = QLabel('API KEYS', self)
+        self.api_lbl.move(20, 145)
+        self.api_keys = QLineEdit(self)
+        self.api_keys.move(110, 140)
+        self.api_keys.resize(170, 20)
+        if api_keys:
+            self.api_keys.setText(api_keys)
+
+        self.dir_lbl = QLabel('FILE PATH', self)
+        self.dir_lbl.move(20, 180)
+        self.dir_location = QLineEdit(self)
+        self.dir_location.move(20, 210)
+        self.dir_location.resize(260, 20)
+        self.dir_location.setEnabled(False)
+        self.dir_btn = QPushButton('경로 설정', self)
+        self.dir_btn.move(110, 175)
+        self.dir_btn.clicked.connect(self.setFilePath)
+        if file_path:
+            self.dir_location.setText(file_path)
+
+        self.repo_btn = QPushButton('레포지토리 생성 밎 GIT AUTO PUSH', self)
+        self.repo_btn.move(50, 240)
+        self.repo_btn.clicked.connect(self.execFile)
+
+        self.lbl = QLabel('AUTOGIT_SSAFY_한재희_박종한', self)
+        self.lbl.move(60, 280)
+
+        self.setWindowTitle('AUTOGIT_SSAFY')
+        self.setGeometry(300, 300, 300, 300)
+        self.show()
+
+    def execFile(self):
+        print(self.userid.text())
+        try:
+            mgr = gitAuto(self.api_keys.text(), self.userid.text(), self.repo_name.text(), self.profid.text(), self.dir_location.text())
+            if not mgr.chkRepo():
+                mgr.makeDir()
+            mgr.makeProject()
+            mgr.makeMember()
+            mgr.chkMember()
+            os.chdir(origin_path)
+            print(origin_path)
+            a = open('info.txt', 'w+')
+            a.write(self.api_keys.text()+'\n'+self.userid.text()+'\n'+self.profid.text()+'\n'+self.dir_location.text())
+            print(self.api_keys.text()+'\n'+self.userid.text()+'\n'+self.profid.text()+'\n'+self.dir_location.text())
+            print("[+] success in writeFile")
+            print("유저 아이디, 교수 아이디, API 키, 마지막으로 경로가 info.txt파일에 저장되었습니다.")
+            print("info.txt를 지우지 않으면 계속 같은 정보를 사용할 수 있습니다. 삭제시 정보가 초기화 됩니다")
+            print("git clone 혹은 push가 완료되었습니다. 프로그램을 종료하셔도 됩니다.")
+            a.close()
+        except Exception as e:
+            print("[-] Error in execFile()")
+            print("ErrorMsg : ", e)
+
+    def setFilePath(self, loc):
+        dialog = QFileDialog(self)
+        dialog.setFileMode(QFileDialog.Directory)
+        dialog.setViewMode(QFileDialog.Detail)
+        if dialog.exec_():
+            dirName = dialog.selectedFiles()
+            self.dir_location.setText(dirName[0])
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    ex = MyApp()
+    sys.exit(app.exec_())
