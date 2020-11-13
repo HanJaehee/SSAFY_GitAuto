@@ -23,10 +23,8 @@ Usage
 </ol>
 
 <hr/>
- <h3> GitAuto Windows .exe ver by 박종한 ( https://github.com/JohnQue )
-
- 
- <h4> 초기화면 </h4><br/>
+ <h3> GitAuto Windows .exe ver by 박종한 ( https://github.com/JohnQue )</h3>
+<br/>
  GitLab 아이디와 교수님 아이디를 입력하세요<br/>
  
  Repository는 매일 hw_오늘날짜 형식( ex) 20년 11월 13일 -> hw_201113 ) 으로 자동입력됩니다.<br/>
