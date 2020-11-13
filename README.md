@@ -21,6 +21,21 @@ Usage
   <img width="1051" alt="액세스토큰획득" src="https://user-images.githubusercontent.com/38396374/93663794-486ef300-faa5-11ea-8680-6697ff124e12.png"><br>
  <li> 이제 하단의 설명 잘 읽어보시고 원하는 방법으로 자동화하기! </li>
 </ol>
+
+<hr/>
+ <h3> GitAuto Windows .exe ver by 박종한 ( https://github.com/JohnQue )
+
+ 
+ <h4> 초기화면 </h4><br/>
+ GitLab 아이디와 교수님 아이디를 입력하세요<br/>
+ 
+ Repository는 매일 hw_오늘날짜 형식( ex) 20년 11월 13일 -> hw_201113 ) 으로 자동입력됩니다.<br/>
+ API KEYS는 상단의 설명에서 발급받은 API KEY를 넣고 하단의 '레포지토리 생성 및 GIT AUTO PUSH' 버튼을 클릭하면 제출 완료! <br/>
+ <img width="1051" alt="초기화면" src="https://user-images.githubusercontent.com/38396374/99020354-bb768080-25a1-11eb-9812-9840bb5540ac.png"><br>
+  
+  예시)
+  <img width="1051" alt="설정화면" src="https://user-images.githubusercontent.com/38396374/99020339-aef22800-25a1-11eb-8457-3e36e6026d22.png"><br>
+ 
  
  <h4> Visual Studio Code ver. update! </h4>
  Vue.js를 새로 배우며 사용할 Git Auto를 업데이트 했어요.<br/>
@@ -34,7 +49,12 @@ Usage
  
  이외의 궁금한 부분들은 깃허브의 issue, ssafy 매터모스트, hindsight@kakao.com 등 으로 메일 주세요!
  <br/>
- --- 
+  
+ ---
+ 
+ 
+  Deprecated
+ ---
  <br/>
  <h4> Eclipse ver. </h4>
  두 가지의 사용법이 존재해요.<br>
