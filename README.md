@@ -7,6 +7,10 @@
 <h4 align="center">❗Python 3.x 버전 필요 !❗</h4>
 <h4 align="center"> VSC, Eclipse 지원! </h4>
 
+License
+---
+SSAFY 모든 교육생들은 자유롭게 커스텀하시고 이용가능!
+
 Usage
 ---
  <h3>👋 pip3 install requests || pip install requests ( Python 버전 체크하시고 명령어 입력하세요! )
